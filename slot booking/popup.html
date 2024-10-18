@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pop.css">
+    <title>POPUP</title>
+  <style>
+
+  .popup-content{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50% -50%);
+      width: 95%;
+      max-width: 350px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 2px 2px 5px;
+    
+
+
+   }
+  .popup-content h4{
+      margin: 10px 0px;
+     font-size: 20px;
+     color: #111;
+      text-align: center;
+
+  }
+  .btn-1{
+   display: flex;
+    justify-content: space-evenly;
+    margin: 20px  0px 0px;
+  }
+  .btn-2{
+   display: flex;
+    justify-content: space-evenly;
+    margin: 20px  0px 0px;
+  }
+  .btn-3{
+   display: flex;
+    justify-content: space-evenly;
+    margin: 20px  0px 0px;
+  }
+  /*
+  .control{
+  width: 85%;
+    background: green;
+    color: blue;
+    font-size: 20px;
+    border: none;
+    border-radius: 4px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    text-align: center;
+    
+    transition: 0.4s ease-in-out;
+  }
+  */
+#submit{
+  width: 100%;
+height: 100vh;
+background: #3c5077;
+display: flex;
+align-items:center;
+justify-content: center;
+}
+
+  #submit{
+   padding: 10px 60px;
+    background: green;
+    color: blue;
+    border: solid 2px yellow;
+    margin-top: 15px;
+    outline: none;
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: 500;
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+  }
+  #submit:hover{
+background: blue;
+color: #fff;
+  }
+  #two{
+   background:orange;
+   color:#fff;
+   font-size: 18px;
+   border-radius: 5px;
+   cursor: pointer;
+      outline: none;
+  }
+  #three{
+   background:orange;
+   color:#fff;
+   font-size: 18px;
+   border-radius: 5px;
+  }
+  #five{
+   background:orange;
+   color:#fff;
+   font-size: 18px;
+   border-radius: 5px;
+  }
+  #six{
+   background:orange;
+   color:#fff;
+   font-size: 18px;
+   border-radius: 5px;
+  }
+  #eight{
+   background:orange;
+   color:#fff;
+   font-size: 18px;
+   border-radius: 5px;
+  }
+  #nine{
+   background:orange;
+   color:#fff;
+   font-size: 18px;
+   border-radius: 5px;
+  }
+  #ten{
+   background:orange;
+   color:#fff;
+   font-size: 18px;
+   border-radius: 5px;
+  }
+  #choose{
+   padding: 10px 60px;
+    background: #fff;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: 500;
+    border-radius: 20px;
+    align-self:first baseline;
+
+  }
+  #choose:hover{
+  
+  background: #000;
+    color: #fff;
+  }
+
+  .popup{
+    width: 400px;
+    background: #fff;
+    border-radius: 6px;
+    position: absolute;
+    top: 0;
+    left: 40%;
+    transform: translate(-50% -50%) scale(0.1);
+    text-align: center;
+    color: #333;
+    padding: 0 30px 30px;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+}
+.open-popup{
+    visibility: visible;
+    top:45%;
+    left: 35%;
+    transform: translate(-50% -50%) scale(1);
+}
+.popup button{
+    width: 80%;
+    margin-top: 50px;
+    padding: 10px 0;
+    background: #6fd649;
+    color: #fff;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0  5px rgba(0,0,0,0.2);
+}
+  </style>
+</head>
+<body>
+
+   <div class="center">
+<button type="Continue to select Time" id="choose" onclick="openpopup()"> Continue to select Time</button>
+<div class="popup" id="popup"></div>
+   </div>
+  
+<div class="popup-content">
+   <h4 id="h4">Choose Your Convinient Time</h4>
+   <div class="box">
+<div class="btn-1">
+   <button id="two"> 8:00am</button>
+   <button id="three"> 9:00am</button>
+</div>
+<h5>BREAK:</h5>
+<div class="btn-2">
+   <button id="five"> 11:00am</button>
+   <button id="six"> 12:00 noon</button>
+</div>
+<h5>LUNCH:</h5>
+<div class="btn-3">
+   <button id="eight">2:00pm</button>
+   <button id="nine"> 3:00pm</button>
+   <button id="ten">4:00pm</button>
+</div>
+
+<div class="control">
+   <button type="submit" id="submit">Submit</button>
+
+</div>
+   </div>
+</div>
+<script>
+   let popup=document.getElementById("popup");
+   function openpopup(){
+   popup.classList.add("open-popup");
+   
+   }
+   function closepopup(){
+   popup.classList.remove("open-popup");
+   }
+   
+    </script>  
+   
+</body>
+</html>

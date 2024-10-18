@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank you popup message</title>
+    <link rel="stylesheet" href="popup-2.css">
+    <style>
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+max-width: 100%;
+height: 100vh;
+background: rgb(4, 4, 39);
+display: flex;
+align-items:center;
+justify-content: center;
+margin: auto;
+
+
+}
+.btnz{
+    padding: 10px 30px;
+    background: orangered;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 10px;
+    margin: 10px 20px;
+
+}
+
+.btnz:hover{
+    background:#fff;
+    color:orangered;
+}
+.popup{
+    width: 500px;
+    background: #fff;
+    border-radius: 6px;
+    position: absolute;
+    top: 0;
+    left: 40%;
+    transform: translate(-50% -50%) scale(0.1);
+    text-align: center;
+    color: #333;
+    padding: 30px 30px;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+}
+.open-popup{
+    visibility: visible;
+    top:20%;
+    left:35%;
+    transform: translate(-50% -50%) scale(1);
+}
+.popup img{
+    width: 100px;
+    margin-top: -30%;
+    border-radius: 50%;  
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); 
+}
+.popup h2{
+    font-size: 50px;
+    font-weight: 500;
+    margin: 30px 5px;
+}
+.popup p{
+    font-size: 30px;
+    font-weight: 400;
+    margin: 10px 20px;
+}
+.popup button{
+    width: 80%;
+    margin-top: 50px;
+    padding: 10px 0;
+    background: #6fd649;
+    color: #fff;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0  5px rgba(0,0,0,0.2);
+}
+.box{
+position: absolute;
+      top: 20%;
+      left: 35%;
+      transform: translate(-50% -50%);
+      max-width:auto;
+      background: #fff;
+      padding: 20px 20px;
+      border-radius: 10px;
+      box-shadow: 0px 2px 2px 5px;
+      align-items: center;
+}
+#submit{
+  width: 85%;
+    background: green;
+    color: #fff;
+    font-size: 20px;
+    border: none;
+    border-radius: 4px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+
+ }
+ #submit a{
+    text-decoration: none;
+    color:white;
+ }
+ #submit:hover{
+    background:#fff;
+    color:#000;
+    border: 1px solid black;
+ }
+ #submit a:hover{
+    color: #000;
+ }
+    </style>
+</head>
+<body>
+ <div class="container">
+    <div class="box">
+        <div class="btn-1">
+           <button id="two" type="submit" class="btnz" onclick="openpopup()"> 8:00am</button>
+           <button id="three"type="submit" class="btnz" onclick="openpopup()"> 9:00am</button>
+        </div>
+        <h5>BREAK:</h5>
+        <div class="btn-2">
+           <button id="five"type="submit" class="btnz" onclick="openpopup()"> 11:00am</button>
+           <button id="six"type="submit" class="btnz" onclick="openpopup()"> 12:00 noon</button>
+        </div>
+        <h5>LUNCH:</h5>
+        <div class="btn-3">
+           <button id="eight"type="submit" class="btnz" onclick="openpopup()">2:00pm</button>
+           <button id="nine"type="submit" class="btnz" onclick="openpopup()"> 3:00pm</button>
+           <button id="ten"type="submit" class="btnz" onclick="openpopup()">4:00pm</button>
+        </div>
+        
+        <div class="control">
+           <button  id="submit"><a href="form.html">Close</a></button>
+    
+        
+        </div>
+           </div>
+    <div class="popup" id="popup">
+        <img src="tick.png">
+        <h2>Thank you</h2>
+        <p>You have successfully booked your slot! check your Email for comfirmation</p>
+        <button type="button" onclick="closepopup()">OK</button>
+    </div>
+ </div> 
+ <script>
+let popup=document.getElementById("popup");
+function openpopup(){
+popup.classList.add("open-popup");
+
+}
+function closepopup(){
+popup.classList.remove("open-popup");
+}
+
+ </script>  
+</body>
+</html>
